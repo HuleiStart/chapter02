@@ -3,7 +3,6 @@ package com.hulei.annotation;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-
 /**
  * @author Mr.Hu
  * @create 2022/10/18 10:31

@@ -2,7 +2,6 @@ package com.hulei.assemble;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 /**
  * @author Mr.Hu
  * @create 2022/10/18 10:15

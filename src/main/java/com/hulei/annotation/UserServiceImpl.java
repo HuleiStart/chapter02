@@ -11,8 +11,12 @@ import javax.annotation.Resource;
 @Service("userService")
  public class UserServiceImpl implements UserService{
 //    使用@Resource注解注入 ----------相当于配置文件中<property name="UserDao" ref="userDao"/>
-    @Resource(name="userDap")
+//    @Resource(name="userDao")
     private UserDao userDao;
+
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
 
     @Override
     public void save() {

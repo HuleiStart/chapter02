@@ -13,8 +13,13 @@ import javax.annotation.Resource;
 @Controller("userController")
 public class UserController {
 //    使用@Resource注解注入  -------- 相当于<property name="userService" ref="userService"/>
-    @Resource(name="userService")
+//    @Resource(name="userService")
     private UserService userService;
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
+
     public void save(){
         this.userService.save();
         System.out.println("运行userController.save()");

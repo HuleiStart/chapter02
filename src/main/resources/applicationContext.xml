@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- 将指定类配置给Spring，让Spring创建其对象的实例-->
+    <bean id="scope" class="com.hulei.scope.Scope" scope="prototype"/>
+
+    <bean id="user1" class="com.hulei.assemble.User">
+        <constructor-arg index="0" value="zhangsan"/>
+        <constructor-arg index="1" value="111111"/>
+        <constructor-arg index="2">
+            <list>
+                <value>"constructorValue1"</value>
+                <value>"constructorValue2"</value>
+            </list>
+        </constructor-arg>
+    </bean>
+    <bean id="user2" class="com.hulei.assemble.User">
+        <property name="userName" value="lisi"></property>
+        <property name="password" value="222222"></property>
+        <property name="list">
+            <list>
+                <value>"lisiValue1"</value>
+                <value>"lisiValue2"</value>
+            </list>
+        </property>
+
+    </bean>
+</beans>
